@@ -3,7 +3,7 @@ import Header from './components/header/Header';
 import Navbar from './components/navbar/Navbar';
 import Profile from './components/profile/Profile';
 import Dialogs from './components/dialogs/Dialogs';
-import { BrowserRouter, Route } from 'react-router-dom/cjs/react-router-dom';
+import { BrowserRouter, Route, Switch} from 'react-router-dom/cjs/react-router-dom';
 
 
 function App() {
@@ -12,10 +12,11 @@ function App() {
       <BrowserRouter>
         <Header />
         <Navbar />
-        <div className='wrapper-content'>
-          <Route path='/profile' component={Profile}/>
+        <Switch>
+          <Route exact path='/' component={Profile} />
+          <Route path='/profile' component={Profile} />
           <Route path='/dialogs' component={Dialogs} />
-        </div>
+        </Switch>
       </BrowserRouter>
     </div>
   );
