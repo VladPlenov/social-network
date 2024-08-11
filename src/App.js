@@ -12,11 +12,13 @@ function App() {
       <BrowserRouter>
         <Header />
         <Navbar />
-        <Switch>
-          <Route exact path='/' component={Profile} />
-          <Route path='/profile' component={Profile} />
-          <Route path='/dialogs' component={Dialogs} />
-        </Switch>
+        <div className='wrapper-contnet'>
+          <Switch>
+            <Route exact path='/' component={Profile} />
+            <Route exact path='/profile' component={Profile} />
+            <Route exact path='/dialogs' component={Dialogs} />
+          </Switch>
+        </div>
       </BrowserRouter>
     </div>
   );

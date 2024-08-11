@@ -1,14 +1,56 @@
-.dialogs{
+.dialogs
+{
     display: flex;
-    flex-flow: column nowrap;
-}
+    /* flex-flow: column nowrap; */
+    flex-flow: row wrap;
+    align-items: center
 
-.message{
+}
+.messages
+{
+    width: 40%;
+    align-items: flex-start;    
+    margin: 5px;
+}
+.message
+{
     display: flex;
     justify-content: space-evenly;
+    background-color: rgb(126, 126, 163);
+    border-radius: 10px;
+    margin: 10px;
+
+}
+button, input 
+{
+    width: 40%;
+    margin: 10px;
+}
+.code
+{
+    width: 50%;
+    margin:  0 auto;
+} 
+.dialog
+{
+    
+    width: 40%; 
+    align-items: center;    
+    margin: 5px;
+    
+}
+.user
+{
+    text-align: center;
+    padding: 15px 0;
+    margin: 10px 0
 }
 
-button, input {
-    width: 30%;
-    margin: 0 auto;
+.user a{
+    color: white;
+    text-decoration: none;
+}
+.user:hover{
+    background-color: rgb(169, 169, 223);
+   padding: 15px 0;
 }
