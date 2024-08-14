@@ -7,17 +7,21 @@ import { BrowserRouter, Route, Routes  } from 'react-router-dom';
 
 
 
-function App() {
+function App(props) {
+  
+  // console.log('Dialogs Name:', props.dialogNames); // Проверка пропсов
+
+
   return (
     <div className='wrapper'>
       <BrowserRouter>
         <Header />
         <Navbar />
-        <div className='wrapper-contnet'>
+        <div className='wrapper-content'>
           <Routes>
-            <Route path='/' element={<Profile />} />
-            <Route path='/profile' element={<Profile />} />
-            <Route path='/dialogs' element={<Dialogs />} />
+            <Route path='/'  element={<Profile  postsData={props.postsData} /> } />
+            <Route path='/profile' element={<Profile postsData={props.postsData} />} />
+            <Route path='/dialogs' element={<Dialogs messageItems={props.messageItems} dialogNames={props.dialogNames} />} />
           </Routes>
         </div>
       </BrowserRouter>

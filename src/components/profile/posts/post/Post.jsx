@@ -9,6 +9,7 @@ function Post(props){
             <img src={ava_min}alt='profile mini photo' />
             <span>Им Фамильев</span>
             <p>{props.message}</p>
+            <span>{props.likes}</span> likes
         </div>
     )
 }

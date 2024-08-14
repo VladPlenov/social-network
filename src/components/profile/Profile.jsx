@@ -1,16 +1,16 @@
 import React from "react";
 import './profile.css'
-import './posts/Posts'
-import ava from '../../img/avatar.png'
 import Posts from "./posts/Posts";
 import ProfileInfo from "./profileInfo/ProfileInfo";
 
 
-function Profile(){
+
+
+function Profile(props){
     return(
         <div className='profile'>
             <ProfileInfo />
-            <Posts />
+            <Posts postsData={props.postsData} />
         </div>
     )
 }
