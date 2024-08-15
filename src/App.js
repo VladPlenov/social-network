@@ -9,9 +9,6 @@ import { BrowserRouter, Route, Routes  } from 'react-router-dom';
 
 function App(props) {
   
-  // console.log('Dialogs Name:', props.dialogNames); // Проверка пропсов
-
-
   return (
     <div className='wrapper'>
       <BrowserRouter>
@@ -19,9 +16,9 @@ function App(props) {
         <Navbar />
         <div className='wrapper-content'>
           <Routes>
-            <Route path='/'  element={<Profile  postsData={props.postsData} /> } />
-            <Route path='/profile' element={<Profile postsData={props.postsData} />} />
-            <Route path='/dialogs' element={<Dialogs messageItems={props.messageItems} dialogNames={props.dialogNames} />} />
+            <Route path='/'  element={<Profile  postsData={props.state.profilePage.postsData} /> } />
+            <Route path='/profile' element={<Profile postsData={props.state.profilePage.postsData} />} />
+            <Route path='/dialogs' element={<Dialogs messageItems={props.state.dialogsPage.messageItems} dialogNames={props.state.dialogsPage.dialogNames} />} />
           </Routes>
         </div>
       </BrowserRouter>

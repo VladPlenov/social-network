@@ -3,6 +3,7 @@ import Post from './post/Post'
 
 
 function Posts(props){
+  
     return(
         <div className='posts'>
             <h2>My posts</h2>
