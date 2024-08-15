@@ -13,7 +13,7 @@ function App(props) {
     <div className='wrapper'>
       <BrowserRouter>
         <Header />
-        <Navbar />
+        <Navbar navMenu={props.state.navMenu.friends} />
         <div className='wrapper-content'>
           <Routes>
             <Route path='/'  element={<Profile  postsData={props.state.profilePage.postsData} /> } />

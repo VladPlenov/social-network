@@ -1,3 +1,9 @@
+import valery from '../img/Valery.png';
+import shaman from '../img/Shaman.png';
+import andrey from '../img/Andrey.png'
+
+
+
 let state ={
     profilePage:{
         postsData: [
@@ -17,6 +23,13 @@ let state ={
             {id:2, message:'Вперед на Марс'},
             {id:3, message:'Где мой чип'}
         ]
+    },
+    navMenu: {
+        friends: [
+            {id:1, ava: valery, name: 'Vslery'},
+            {id:2, ava: shaman, name: 'Yarik'},
+            {id:3, ava: andrey, name: 'Andrey'}
+        ]    
     }   
 }
 
